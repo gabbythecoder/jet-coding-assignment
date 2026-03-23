@@ -2,22 +2,12 @@
 
 import { useState } from "react";
 
-export default function SearchBar() {
+export default function SearchBar({ onSearch }) {
   const [postcode, setPostcode] = useState("");
 
-  async function getPostcode(event) {
-    // stop page reload
+  function handleSubmit(event) {
     event.preventDefault();
-
-    try {
-      const response = await fetch(
-        `api/?postcode=${encodeURIComponent(postcode)}`,
-      );
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    onSearch(postcode);
   }
 
   function handleChange(event) {
@@ -26,7 +16,7 @@ export default function SearchBar() {
 
   return (
     <div>
-      <form onSubmit={getPostcode}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={postcode}
