@@ -24,10 +24,8 @@ export default function HomePage() {
   }
 
   return (
-    <div>
-      <h1>Hello!</h1>
-
-      <section>
+    <div className="flex flex-col w-full">
+      <section className="mt-5">
         <SearchBar onSearch={handleSearch} />
       </section>
 

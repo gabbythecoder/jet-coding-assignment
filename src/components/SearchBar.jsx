@@ -3,11 +3,12 @@
 import { useState } from "react";
 
 export default function SearchBar({ onSearch }) {
-  const [postcode, setPostcode] = useState("");
+  const [postcode, setPostcode] = useState("EC4M 7RF"); // default for now while testing
 
   function handleSubmit(event) {
     event.preventDefault();
     onSearch(postcode);
+    // setPostcode(""); 
   }
 
   function handleChange(event) {
@@ -29,7 +30,7 @@ export default function SearchBar({ onSearch }) {
         />
         <button
           type="submit"
-          className="cursor-pointer px-2 border-2 rounded-lg p-0.5 border-(--border)"
+          className="cursor-pointer px-2 border-2 rounded-lg p-0.5 border-(--border) hover:bg-(--hover)"
         >
           Search
         </button>
