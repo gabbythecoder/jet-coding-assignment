@@ -2,7 +2,7 @@ import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
 const ubuntu = Ubuntu({
-  weight: ["300", "500", "700"],
+  weight: ["300", "400", "500", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
@@ -14,8 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${ubuntu.className}`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body className={`${ubuntu.className} min-h-full flex flex-col`}>{children}</body>
     </html>
   );
 }

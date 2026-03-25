@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import SearchBar from "@/components/SearchBar";
+import Header from "@/components/Header";
 import RestaurantList from "@/components/RestaurantList";
 
 export default function HomePage() {
@@ -25,12 +25,10 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col w-full">
-      <section className="mt-5">
-        <SearchBar onSearch={handleSearch} />
-      </section>
+      <Header onSearch={handleSearch} />
 
       <section>
-        <RestaurantList restaurants={restaurants}/>
+        <RestaurantList restaurants={restaurants} />
       </section>
     </div>
   );
