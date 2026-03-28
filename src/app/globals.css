@@ -12,3 +12,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.restaurant-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/jet-logo.png");
+  background-size: 80%;
+  background-position: 200% bottom;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+}
