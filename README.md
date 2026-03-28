@@ -9,6 +9,8 @@
   - Cuisines
   - Rating (as a number)
   - Address
+- Displays an error message when no restaurants are found for the entered postcode
+- Clears previous restaurant results when new postcode search is submitted
 - Fully responsive design for mobile and desktop
 
 ## How to Build, Compile and Run
@@ -49,7 +51,7 @@ npm run dev
 yarn dev
 ```
 
-- Open your browser at [local host](http://localhost:3000) to view the app.
+- Open your browser at [local host](http://localhost:3000) to view the app
 - Optional - Test the app
   - Use the search bar on the homepage to enter a postcode
   - The app will fetch and display up to the first 10 restaurants
