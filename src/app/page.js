@@ -6,8 +6,11 @@ import RestaurantList from "@/components/RestaurantList";
 
 export default function HomePage() {
   const [restaurants, setRestaurants] = useState([]);
+  const [inputPostcode, setInputPostcode] = useState("");
 
   async function handleSearch(postcode) {
+    setInputPostcode(postcode); // update the postcode when search is submitted
+
     try {
       const response = await fetch(
         `api/?postcode=${encodeURIComponent(postcode)}`,
@@ -26,6 +29,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full">
       <Header onSearch={handleSearch} />
+
+      {/* Show the postcode in the results message*/}
+      {inputPostcode && <p className="text-center mt-8">Showing results for: <strong>{inputPostcode}</strong></p>}
 
       <section>
         <RestaurantList restaurants={restaurants} />

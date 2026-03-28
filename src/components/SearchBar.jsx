@@ -6,12 +6,12 @@ import Image from "next/image";
 import searchIcon from "@/../public/search-icon.png";
 
 export default function SearchBar({ onSearch }) {
-  const [postcode, setPostcode] = useState("EC4M 7RF"); // default for now while testing
+  const [postcode, setPostcode] = useState("EC4M 7RF"); // default
 
   function handleSubmit(event) {
     event.preventDefault();
-    onSearch(postcode);
-    // setPostcode("");
+    onSearch(postcode); // pass the postcode to the parent (HomePage)
+    setPostcode(""); // clear the postcode after search
   }
 
   function handleChange(event) {
