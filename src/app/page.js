@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import RestaurantList from "@/components/RestaurantList";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   const [restaurants, setRestaurants] = useState([]);
@@ -40,7 +41,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col min-h-screen w-full">
       <Header onSearch={handleSearch} />
 
       {/* Show the postcode in the results message only if there are restaurants */}
@@ -59,9 +60,11 @@ export default function HomePage() {
         </div>
       )}
 
-      <section>
+      <section className="flex-grow">
         <RestaurantList restaurants={restaurants} />
       </section>
+
+      <Footer />
     </div>
   );
 }
