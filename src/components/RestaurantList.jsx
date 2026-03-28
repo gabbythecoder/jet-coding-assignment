@@ -9,7 +9,7 @@ export default function RestaurantList({ restaurants }) {
       {restaurants.slice(0, 10).map((restaurant) => (
         <div
           key={restaurant.id}
-          className="restaurant-card border-2 p-4 rounded-xl overflow-hidden bg-cover w-full aspect-square sm:max-w-75 sm:max-h-75 md:max-w-87.5 md:max-h-87.5 lg:max-w-100 lg:max-h-100 flex flex-col justify-between"
+          className="restaurant-card p-4 shadow-xl rounded-xl overflow-hidden bg-cover w-full aspect-square sm:max-w-75 sm:max-h-75 md:max-w-87.5 md:max-h-87.5 lg:max-w-100 lg:max-h-100 flex flex-col justify-between"
         >
           {/* Background layer */}
           <div className="card-bg"></div>
