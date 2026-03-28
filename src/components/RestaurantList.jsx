@@ -5,7 +5,7 @@ import pinLocationIcon from "@/../public/pin-location-icon.png";
 
 export default function RestaurantList({ restaurants }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2 m-10 justify-items-center items-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2 m-8 justify-items-center items-center">
       {restaurants.slice(0, 10).map((restaurant) => (
         <div
           key={restaurant.id}
@@ -16,7 +16,7 @@ export default function RestaurantList({ restaurants }) {
 
           <div className="relative z-10 flex flex-col h-full">
             {/* Restaurant name */}
-            <h3 className="font-bold text-[0.9rem] mb-2">{restaurant.name}</h3>
+            <h3 className="font-bold text-[0.9rem] lg:text-base mb-2">{restaurant.name}</h3>
 
             {/* Cuisine type */}
             <div className="flex items-center gap-1 mb-1">
@@ -26,7 +26,7 @@ export default function RestaurantList({ restaurants }) {
                 width={18}
                 height={18}
               />
-              <span className="text-[0.8rem]">
+              <span className="text-[0.8rem] lg:text-[0.9rem]">
                 {restaurant.cuisines
                   ?.slice(0, 2)
                   .map((cuisine) => cuisine.name)
@@ -42,7 +42,7 @@ export default function RestaurantList({ restaurants }) {
                 width={18}
                 height={18}
               />
-              <span className="text-[0.8rem]">
+              <span className="text-[0.8rem] lg:text-[0.9rem]">
                 {restaurant.rating?.starRating || "N/A"}
               </span>
             </div>
@@ -56,7 +56,7 @@ export default function RestaurantList({ restaurants }) {
                 height={18}
                 className="mt-[0.06rem]"
               />
-              <span className="wrap-break-word text-[0.8rem]">
+              <span className="wrap-break-word text-[0.8rem] lg:text-[0.9rem]">
                 {restaurant.address
                   ? `${restaurant.address.firstLine}, ${restaurant.address.city}, ${restaurant.address.postalCode}`
                   : "N/A"}
