@@ -10,7 +10,7 @@ It is a restaurant search web application that displays a list of 10 restaurants
 - Displays only the first 10 restaurants returned by the API
 - Shows all four restaurant data points:
   - Name
-  - Cuisines
+  - Cuisines (limited to two for cleaner UI, as some restaurant entries had multiple cuisines)
   - Rating (as a number)
   - Address
 - Displays an error message when no restaurants are found for the entered postcode
